@@ -37,8 +37,11 @@ Instance used Amazon Linux 2 with t2.medium and 25 Gig storage
 	Install conntrack
 
 		sudo yum install conntrack -y
+
 		
-		
+	*** Reboot the instance to apply the changes ***
+	
+	
 	Start minikube
 
 		minikube start --vm-driver=none
@@ -46,7 +49,7 @@ Instance used Amazon Linux 2 with t2.medium and 25 Gig storage
 
 	Install git
 	
-		sudo yum install git
+		sudo yum install git -y
 
 	
 	Clone files from repository
@@ -69,5 +72,6 @@ Instance used Amazon Linux 2 with t2.medium and 25 Gig storage
 
 	Access the web application via web browser
 	
-		Public IPv4 address:30100
-
+		http://<Public IPv4 address>:30100
+		
+			Replace the <Public IPv4 address> above with the actual Public IPv4 address of your instance
